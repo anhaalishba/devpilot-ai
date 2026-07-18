@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+
+langgraph
+langchain
+langchain-core
+
+openai
+
+python-dotenv
+
+pydantic
+
+httpx
+
+# pip install -r requirements.txt
