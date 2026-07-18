@@ -1,0 +1,5 @@
+QWEN_API_KEY=your api
+
+QWEN_MODEL=qwen3.7-plus
+
+QWEN_BASE_URL=url your
