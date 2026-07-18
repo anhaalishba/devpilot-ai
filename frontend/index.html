@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevPilot AI</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Markdown Renderer -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Syntax Highlight -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<button id="menuBtn" class="menu-btn" aria-label="Toggle sidebar">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div class="container">
+
+    <!--Sidebar-->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h2>DevPilot AI</h2>
+        </div>
+
+        <button class="new-project" id="newProject">
+            <i class="fa-solid fa-plus"></i>
+            New project
+        </button>
+
+        <div class="project-list">
+            <h3>Projects</h3>
+            <ul id="projectList">
+                <li><i class="fa-solid fa-folder"></i>Library management</li>
+                <li><i class="fa-solid fa-folder"></i>Hospital management</li>
+                <li><i class="fa-solid fa-folder"></i>E-commerce website</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-account" id="sidebarAccount">
+            <button class="account-btn" id="accountBtn">
+                <i class="fa-solid fa-circle-user"></i>
+            </button>
+
+            <div class="account-menu" id="accountMenu">
+                <button class="logout-option" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <header>
+            <h1>Multi-agent software engineer</h1>
+            <p>Build Software with Intelligent AI Agents</p>
+        </header>
+
+        <!-- Agent card dashboard -->
+        <section class="agent-grid" id="agentGrid"></section>
+
+        <!-- Build log: user prompts -->
+        <section class="log" id="log">
+            <div class="log-entry role-system">
+                <div class="entry-head">
+                    <span class="entry-tag tag-system"><i class="fa-solid fa-terminal"></i>system</span>
+                    <span class="entry-time">ready</span>
+                </div>
+                <div class="entry-body">
+                    Describe your software idea 
+                    Example: <em>Build a hospital management system in Java.</em>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processing indicator -->
+        <div class="processing" id="processing">
+            <span></span><span></span><span></span>
+            <span class="processing-label" id="processingLabel">Working…</span>
+        </div>
+
+        <div class="input-box">
+            <textarea id="prompt" placeholder="Describe your software idea..."></textarea>
+            <button id="sendBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send
+            </button>
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Agent details  -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<!--messeages -->
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="script.js"></script>
+<script src="auth.js" defer></script>
+</body>
+</html>

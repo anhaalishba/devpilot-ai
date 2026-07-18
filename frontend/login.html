@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | DevPilot</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body class="login-page">
+
+<div class="login-card">
+
+<div class="login-logo">
+<i class="fa-solid fa-diagram-project"></i>
+</div>
+
+<h1 class="login-title">
+DevPilot AI
+</h1>
+
+<p class="login-sub">
+Login to continue building projects
+</p>
+
+<input
+type="email"
+id="email"
+placeholder="Email">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button
+class="login-btn"
+onclick="login()">
+
+Login
+
+</button>
+
+<button
+class="signup-btn"
+onclick="signup()">
+
+Create Account
+
+</button>
+
+<p class="login-footer">
+
+Powered by DevPilot AI. All rights reserved.
+
+</p>
+
+</div>
+
+<!--  notifications -->
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js" defer></script>
+
+</body>
+
+</html>
