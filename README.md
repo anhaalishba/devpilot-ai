@@ -237,7 +237,8 @@ MIT License
 
 # 👨‍💻 Developer
 
-**Anha Alishba**
-**Sayed Asad Murtiza**
+-**Sayed Asad Murtiza**
+
+-**Anha Alishba**
 
 Built for modern AI-powered software engineering.
